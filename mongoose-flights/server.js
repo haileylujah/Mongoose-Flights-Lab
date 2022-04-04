@@ -8,7 +8,7 @@ var logger = require('morgan');
 require('./config/database');
 var indexRouter = require('./routes/index');
 var flightsRouter = require('./routes/flights');
-// const reviewsRouter = require('./routes/reviews');
+var destinationsRouter = require('./routes/destinations');
 
 var app = express();
 
@@ -24,7 +24,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 app.use('/flights', flightsRouter); 
-
+app.use('/', destinationsRouter);
 app.use('/', indexRouter); 
 
 

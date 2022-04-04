@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 
 
 const destinationSchema = new Schema({
-  airport: String,
+  desAirport: String,
   arrival: Date,
 });
 
@@ -13,7 +13,7 @@ const flightSchema = new Schema({
     airport: String,
     flightNo: String,
     departs: Date,
-    destinations: destinationSchema,
+    destinations: [destinationSchema]
   });
 
   module.exports = mongoose.model('Flight', flightSchema);

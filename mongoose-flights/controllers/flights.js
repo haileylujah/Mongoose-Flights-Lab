@@ -22,6 +22,7 @@ function index(req, res) {
 }
 
 function create(req, res) {
+ console.log(req.body);
 
   if((req.body.flightNo < 10)||(req.body.flightNo > 9999)) req.body.flightNo = "n/a";
 
