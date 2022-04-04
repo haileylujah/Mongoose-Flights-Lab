@@ -1,0 +1,10 @@
+<section id="show-page">
+  <div>Airline: </div>
+  <div><%= flight.airline %></div>
+  <div>Airport: </div>
+  <div><%= flight.airport %></div>
+  <div>FlightNo: </div>
+  <div><%= flight.flightNo %></div>
+  <div>Depart: </div>
+  <div><%= flight.departs.toISOString().slice(0,10) %></div>
+</section>

@@ -4,7 +4,7 @@ mongoose.connect('mongodb://localhost/flights', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
-	
+
 // shortcut to mongoose.connection object
 const db = mongoose.connection;
 	

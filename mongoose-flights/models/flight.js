@@ -1,10 +1,19 @@
 const mongoose = require('mongoose');
-// optional shortcut to the mongoose.Schema class
+
 const Schema = mongoose.Schema;
-	
-const flightSchema = new Schema({
-  airline: String,
+
+
+const destinationSchema = new Schema({
   airport: String,
-  flightNo: Number,
-  departs: Date,
+  arrival: Date,
 });
+
+const flightSchema = new Schema({
+    airline: String,
+    airport: String,
+    flightNo: String,
+    departs: Date,
+    destinations: destinationSchema,
+  });
+
+  module.exports = mongoose.model('Flight', flightSchema);
