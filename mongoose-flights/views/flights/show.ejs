@@ -34,7 +34,7 @@
       `<option value="${t._id}">${t.seat}</option>`
     ).join('') %>
   </select>
-  <button type="submit">Add Ticket</button>
+  <button class="submit" type="submit">Add Ticket</button>
 </form>
 
 <h4>Destinations</h4>
@@ -65,13 +65,13 @@
   <form id="add-destination-form" method="POST"
   action="/flights/<%= flight._id %>/destinations">
 <label><h5>Add Destinations:</h5></label>
-<select name="desAirport">
+<select class="dropdown" name="desAirport">
   <option value="AUS">AUS</option>
   <option value="DFW">DFW</option>
   <option value="DEN">DEN</option>
   <option value="LAX">LAX</option>
   <option value="SAN">SAN</option>
 </select>
-<input type="datetime-local" name="arrival">
-<input type="submit" value="Add Destination">
+<input class="dropdown" type="datetime-local" name="arrival">
+<input class="submit" type="submit" value="Add Destination">
 </form>

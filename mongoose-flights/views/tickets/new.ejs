@@ -7,15 +7,15 @@
 <form id="add-ticket-form" method="POST" action="/tickets">
 <label><h2>Add Tickets:</h2></label>
 <label><h4>Seat:</h4></label>
-<input name="seat" type ="text" pattern="[A-F][1-9]\d?">
+<input class="dropdown" name="seat" type ="text" pattern="[A-F][1-9]\d?">
 <label><h4>Price:</h4></label>
-<input type="number" name="price">
+<input class="dropdown" type="number" name="price">
 <!-- <label>Flight:</label>
 <input type="objectId" name="flight"> -->
-<input type="submit" value="Add Ticket">
+<input class="submit" type="submit" value="Add Ticket">
 </form>
 
-
+<br>
 <select>
   <% tickets.forEach(function(t) { %>
     <option><%= t.seat %></option>

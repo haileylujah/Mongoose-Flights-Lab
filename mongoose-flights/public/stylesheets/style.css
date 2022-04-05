@@ -1,10 +1,44 @@
 body {
   background-color: lightblue;
   padding: 50px;
-  font: 20px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 20px 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 a {
   color: rgb(18, 53, 85);
   margin: 0px 27px 0px 0px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+button {
+  font-family: fantasy;
+}
+
+input {
+  font-family: fantasy;
+}
+
+select {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  height: 3vh;
+  width: 20vh;
+  font-size: 20px;
+}
+
+.dropdown {
+  height: 3vh;
+  width: 20vh;
+  font-size: 20px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+}
+
+.submit {
+  font-size: 20px;
+  height: 3vh;
+  width: auto;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+tbody {
+  font-size: 20px;
 }
