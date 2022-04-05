@@ -4,6 +4,7 @@ body {
   font: 20px 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+
 a {
   color: rgb(18, 53, 85);
   margin: 0px 27px 0px 0px;
@@ -41,4 +42,36 @@ select {
 
 tbody {
   font-size: 20px;
+}
+
+#title {
+  font-family: fantasy;
+  font-size: 10vh;
+  width: 100vh;
+  height: auto;
+}
+
+.subtitle {
+  font-family: fantasy;
+  font-size: 4vh;
+  margin: 0px 0px 0px 27px;
+  width: 100vh;
+  height: auto;
+}
+
+blk {
+  display: flex;
+  align-items: baseline;
+}
+
+p {
+  margin: 2vh;
+  font-size: larger;
+  font-weight: bold;
+}
+
+.img {
+  background-image: url(../images/mongoose.png);
+  width: 100vh;
+  height: auto;
 }

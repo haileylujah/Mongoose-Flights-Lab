@@ -1,4 +1,5 @@
 <link rel='stylesheet' href='/stylesheets/style.css' />
+<a href="/" <%- title === 'Home' ? 'class="active"' : '' %>>HOME</a>
 <a href="/flights/new" <%- title === 'Add Flight' ? 'class="active"' : '' %>>ADD FLIGHT</a>
 <a href="/flights" <%- title === 'All Flights' ? 'class="active"' : '' %>>ALL FLIGHTS</a>
 
@@ -10,8 +11,6 @@
 <input class="dropdown" name="seat" type ="text" pattern="[A-F][1-9]\d?">
 <label><h4>Price:</h4></label>
 <input class="dropdown" type="number" name="price">
-<!-- <label>Flight:</label>
-<input type="objectId" name="flight"> -->
 <input class="submit" type="submit" value="Add Ticket">
 </form>
 
