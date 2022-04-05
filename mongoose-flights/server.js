@@ -9,6 +9,7 @@ require('./config/database');
 var indexRouter = require('./routes/index');
 var flightsRouter = require('./routes/flights');
 var destinationsRouter = require('./routes/destinations');
+const ticketsRouter = require('./routes/tickets')
 
 var app = express();
 
@@ -25,6 +26,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/flights', flightsRouter); 
 app.use('/', destinationsRouter);
+app.use('/', ticketsRouter);
 app.use('/', indexRouter); 
 
 

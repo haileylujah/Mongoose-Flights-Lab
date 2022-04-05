@@ -1,19 +1,43 @@
-<%- include('../partials/header') %>
+<a href="/" <%- title === 'Home' ? 'class="active"' : '' %>>HOME</a>
+<a href="/tickets/new"	<%- title === 'Add Ticket' ? 'class="active"' : '' %>>NEW TICKET</a>
+<a href="/flights/new" <%- title === 'Add Flight' ? 'class="active"' : '' %>>ADD FLIGHT</a>
+<a href="/flights" <%- title === 'All Flights' ? 'class="active"' : '' %>>ALL FLIGHTS</a>
+
+<link rel='stylesheet' href='/stylesheets/style.css' />
 
 
 <section id="show-page">
-  <div>Airline: </div>
+  <div><h4>Airline:</h4></div>
   <div><%= flight.airline %></div>
-  <div>Airport: </div>
+  <div><h4>Airport:</h4></div>
   <div><%= flight.airport %></div>
-  <div>FlightNo: </div>
+  <div><h4>Flight Number:</h4></div>
   <div><%= flight.flightNo %></div>
-  <div>Depart: </div>
+  <div><h4>Departure:</h4></div>
   <div><%= flight.departs.toISOString().slice(0,16) %></div>
 
 </section>
 
-<br><br><h2>Destinations</h2>
+<div><h4>Ticket:</h4></div>
+  <ul>
+    <%- flight.flightsTickets.map(t => 
+      `<li>${t.seat} <small>${t.price}</small></li>`
+    ).join('') %>
+  </ul>
+
+
+
+</section>
+<form id="add-ticket-to-flight" action="/flights/<%= flight._id %>/tickets" method="POST">
+  <select name="ticketId">
+    <%- tickets.map(t => 
+      `<option value="${t._id}">${t.seat}</option>`
+    ).join('') %>
+  </select>
+  <button type="submit">Add Ticket</button>
+</form>
+
+<h4>Destinations</h4>
 
 
 <% if (flight.destinations.length) { %>
@@ -40,7 +64,7 @@
   <br>
   <form id="add-destination-form" method="POST"
   action="/flights/<%= flight._id %>/destinations">
-<label>Destinations:</label>
+<label><h5>Add Destinations:</h5></label>
 <select name="desAirport">
   <option value="AUS">AUS</option>
   <option value="DFW">DFW</option>
@@ -51,4 +75,3 @@
 <input type="datetime-local" name="arrival">
 <input type="submit" value="Add Destination">
 </form>
-<%- include('../partials/footer') %>

@@ -1,0 +1,24 @@
+<link rel='stylesheet' href='/stylesheets/style.css' />
+<a href="/flights/new" <%- title === 'Add Flight' ? 'class="active"' : '' %>>ADD FLIGHT</a>
+<a href="/flights" <%- title === 'All Flights' ? 'class="active"' : '' %>>ALL FLIGHTS</a>
+
+
+
+<form id="add-ticket-form" method="POST" action="/tickets">
+<label><h2>Add Tickets:</h2></label>
+<label><h4>Seat:</h4></label>
+<input name="seat" type ="text" pattern="[A-F][1-9]\d?">
+<label><h4>Price:</h4></label>
+<input type="number" name="price">
+<!-- <label>Flight:</label>
+<input type="objectId" name="flight"> -->
+<input type="submit" value="Add Ticket">
+</form>
+
+
+<select>
+  <% tickets.forEach(function(t) { %>
+    <option><%= t.seat %></option>
+  <% }) %>
+</select>
+</p>

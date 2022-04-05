@@ -6,8 +6,10 @@
   </head>
   <body>
     <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-    <a href="/flights/new">New Flight</a>
-    <a href="/flights">All Flights</a>
+    <p>Welcome to Mongoose Flights Lab</p>
+    <br>
+    <a href="/tickets/new"	<%- title === 'Add Ticket' ? 'class="active"' : '' %>>NEW TICKET</a>
+    <a href="/flights/new">ADD FLIGHT</a>
+    <a href="/flights">ALL FLIGHTS</a>
   </body>
 </html>

@@ -1,9 +1,19 @@
 const Flight = require("../models/flight");
+const Ticket = require('../models/ticket');
 
 
 function show(req, res) {
-  Flight.findById(req.params.id, function (err, flightFromTheDatabase) {
-    res.render("flights/show", { title: "Flights Detail", flight: flightFromTheDatabase });
+  Flight.findById(req.params.id)
+  .populate('flightsTickets').exec(function(err, flight) {
+    Ticket.find(
+     {_id: {$nin: flight.flightsTickets}}, 
+     function(err, tickets) {
+       console.log(tickets);
+       res.render('flights/show', {
+         title: 'Flight Detail', flight: flight, tickets: tickets
+       });
+     }
+   );
   });
 }
 
@@ -36,6 +46,7 @@ function create(req, res) {
   for (let key in req.body) {
     if (req.body[key] === "") delete req.body[key];
   }
+
 
 
   const flight = new Flight(req.body);

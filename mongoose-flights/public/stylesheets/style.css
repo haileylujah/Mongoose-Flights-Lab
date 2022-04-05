@@ -1,5 +1,5 @@
 body {
-  background-color: skyblue;
+  background-color: lightblue;
   padding: 50px;
   font: 20px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
@@ -8,4 +8,3 @@ a {
   color: rgb(18, 53, 85);
   margin: 0px 27px 0px 0px;
 }
-

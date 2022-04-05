@@ -1,8 +1,10 @@
-<%- include('../partials/header') %>
+<a href="/" <%- title === 'Home' ? 'class="active"' : '' %>>HOME</a>
+<a href="/tickets/new"	<%- title === 'Add Ticket' ? 'class="active"' : '' %>>NEW TICKET</a>
+<a href="/flights" <%- title === 'All Flights' ? 'class="active"' : '' %>>ALL FLIGHTS</a>
 
-
+<link rel='stylesheet' href='/stylesheets/style.css' />
   <form id="new-form" action="/flights" method="POST">
-    <label>Airline:</label>
+    <label><h4>Airline:</h4></label>
     <select name="airline">
       <option value="n/a"></option>
       <option value="American">American</option>
@@ -10,7 +12,7 @@
       <option value="Southwest">Southwest</option>
       <option value="United">United</option>
     </select>
-    <label>Airport:</label>
+    <label><h4>Airport:</h4></label>
     <select name="airport">
       <option value="DEN">DEN</option>
       <option value="ATL">ATL</option>
@@ -18,12 +20,10 @@
       <option value="LAX">LAX</option>
       <option value="SAN">SAN</option>
     </select>
-    <label>FlightNo:</label>
+    <label><h4>Flight Number:</h4></label>
     <input type="number" name="flightNo">
-    <label>Departs:</label>
+    <label><h4>Departure:</h4></label>
     <input type="datetime-local" name="departs">
     
     <input type="submit" value="Add Flight">
   </form>
-
-  <%- include('../partials/footer') %>
