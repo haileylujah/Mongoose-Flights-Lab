@@ -19,11 +19,11 @@
 </section>
 
 <div><h3>Ticket:</h3></div>
-  <ul>
+  <ul><h4>
     <%- flight.flightsTickets.map(t => 
-      `<li>${t.seat} <small>${t.price}</small></li>`
+      `<li>${t.seat} - <small>$${t.price}</small></li>`
     ).join('') %>
-  </ul>
+  </h4></ul>
 
 
 
