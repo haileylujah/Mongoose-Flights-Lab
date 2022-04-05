@@ -5,20 +5,20 @@
 
 <link rel='stylesheet' href='/stylesheets/style.css' />
 
-
+<label><h1>Flight Information:</h1></label>
 <section id="show-page">
-  <div><h4>Airline:</h4></div>
+  <div><h3>Airline:</h3></div>
   <div><%= flight.airline %></div>
-  <div><h4>Airport:</h4></div>
+  <div><h3>Airport:</h3></div>
   <div><%= flight.airport %></div>
-  <div><h4>Flight Number:</h4></div>
+  <div><h3>Flight Number:</h3></div>
   <div><%= flight.flightNo %></div>
-  <div><h4>Departure:</h4></div>
+  <div><h3>Departure:</h3></div>
   <div><%= flight.departs.toISOString().slice(0,16) %></div>
 
 </section>
 
-<div><h4>Ticket:</h4></div>
+<div><h3>Ticket:</h3></div>
   <ul>
     <%- flight.flightsTickets.map(t => 
       `<li>${t.seat} <small>${t.price}</small></li>`
@@ -37,7 +37,7 @@
   <button class="submit" type="submit">Add Ticket</button>
 </form>
 
-<h4>Destinations</h4>
+<h3>Destinations</h3>
 
 
 <% if (flight.destinations.length) { %>
@@ -64,7 +64,7 @@
   <br>
   <form id="add-destination-form" method="POST"
   action="/flights/<%= flight._id %>/destinations">
-<label><h5>Add Destinations:</h5></label>
+<label><h4>Add Destinations:</h4></label>
 <select class="dropdown" name="desAirport">
   <option value="AUS">AUS</option>
   <option value="DFW">DFW</option>

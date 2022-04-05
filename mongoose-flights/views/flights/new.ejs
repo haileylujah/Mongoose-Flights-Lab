@@ -4,6 +4,7 @@
 
 <link rel='stylesheet' href='/stylesheets/style.css' />
   <form id="new-form" action="/flights" method="POST">
+    <label><h2>Add Flights:</h2></label>
     <label><h4>Airline:</h4></label>
     <select name="airline">
       <option value="n/a"></option>
@@ -21,7 +22,7 @@
       <option value="SAN">SAN</option>
     </select>
     <label><h4>Flight Number:</h4></label>
-    <input class="dropdown" type="number" name="flightNo">
+    <input class="dropdown" type="number" name="flightNo" placeholder = 'Ex. 1234'>
     <label><h4>Departure:</h4></label>
     <input class="dropdown" type="datetime-local" name="departs">
     

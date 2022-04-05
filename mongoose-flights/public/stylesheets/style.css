@@ -69,9 +69,3 @@ p {
   font-size: larger;
   font-weight: bold;
 }
-
-.img {
-  background-image: url(../images/mongoose.png);
-  width: 100vh;
-  height: auto;
-}
